@@ -28,10 +28,15 @@ public class RulesTest {
         assertEquals(scissors, scissors.vs(paper));
     }
 
-    @Test
-    void tieWhenBothAreSame() {
-        assertEquals(rock, rock.vs(rock));
-        assertEquals(paper, paper.vs(paper));
+    @Test tieWhenBothAreRock() {
+        assertEquals(rock, rock.vs(rock))
+    }
+
+    @Test tieWhenBothArePaper() {
+        assertEquals(paper, rock.vs(paper))
+    }
+
+    @Test tieWhenBothAreScissors() {
         assertEquals(scissors, scissors.vs(scissors));
     }
 }
